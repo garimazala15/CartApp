@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart App</title>
+    <link rel="stylesheet" href="Cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Shopping Cart</h1>
+        <nav>
+            <button onclick="filterItems('Men')">Men</button>
+            <button onclick="filterItems('Women')">Women</button>
+            <button onclick="filterItems('Kids')">Kids</button>
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="search-item" placeholder="Search" onkeyup="search()">
+            </div>
+            <div class="cart-container" onclick="toggleCart()">
+                <i class="fa-solid fa-cart-shopping fa-2x"></i>
+                    <span id="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+    <section class="Product" id="product-list"></section>
+    <section class="Cart" id="cart-list">
+        <h2>Your Cart</h2>
+        <button class="close-cart-btn" onclick="toggleCart()">Close Cart</button>
+    </section>
+    
+    <footer>
+       <p>ALL COPYRIGHT &copy; RESERVED 2024 CART APP</p>
+    </footer>
+    <script src="Cart.js"></script>
+</body>
+</html>
